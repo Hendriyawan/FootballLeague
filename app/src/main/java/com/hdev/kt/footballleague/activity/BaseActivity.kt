@@ -11,10 +11,10 @@ open class BaseActivity : AppCompatActivity() {
     protected fun initActionBar(uiClass: String?) {
         supportActionBar?.apply {
             title = resources.getString(R.string.app_name)
-            this.setDisplayShowHomeEnabled(true)
-            this.setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            setDisplayHomeAsUpEnabled(true)
             if (uiClass.equals("main")) {
-                this.setHomeAsUpIndicator(resources.getDrawable(R.drawable.ic_trophy_white_24dp))
+                setHomeAsUpIndicator(resources.getDrawable(R.drawable.ic_trophy_white_24dp))
             }
         }
     }
