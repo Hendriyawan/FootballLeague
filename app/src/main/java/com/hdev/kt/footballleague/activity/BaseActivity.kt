@@ -23,7 +23,7 @@ open class BaseActivity : AppCompatActivity() {
         val leagueList: MutableList<League> = mutableListOf()
         val jsonFile: String? = applicationContext.assets.open("league.json").bufferedReader().use { it.readText() }
         JSONObject(jsonFile).apply {
-            JSONArray("league").apply {
+            getJSONArray("league").apply {
                 for (i in 0 until length()) {
                     getJSONObject(i).apply {
                         leagueList.add(League(getString("logo"), getString("name"), getString("description")))
