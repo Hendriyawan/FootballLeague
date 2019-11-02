@@ -26,7 +26,6 @@ class LeagueAdapter(private var leagueList: List<League>, private val listener: 
         holder.bind(leagueList[position], listener)
     }
 
-    //
     inner class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
 
         private val itemLinearLayout = itemView.findViewById<LinearLayout>(ItemUI.linear_layout)
